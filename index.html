@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./toastr/toastr.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Kitap Al</title>
+</head>
+    <body>
+        <nav class="navbar">
+            <h2 class="title">Altınışık KitapEvi</h2>
+            <ul class="menu">
+                <li class="active">Kitaplar</li>
+                <li>Sesli Kitap</li>
+                <li>Hediye</li>
+                <li>Hakkımızda</li>
+            </ul>
+            <ul class="menu-icons">
+                <li><i class="bi bi-person"></i></li>
+                <li><i class="bi bi-search"></i></li>
+                <li class="basket__icon" onclick="toggleModel()">
+                    <i class="bi bi-bag"></i>
+                    <span class="basket__count"></span>
+                </li>
+            </ul>
+        </nav>
+        <section class="slider">
+            <div id="carouselbookslider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/slide1.png" class="d-block w-100" alt="onlineSchool">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/slide2.png" class="d-block w-100" alt="Çocuk Kitap Günü">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/slide3.png" class="d-block w-100" alt="Sevgililer Günü">
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselbookslider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselbookslider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="store my-5">
+            <div class="filter_background"></div>
+            <ul class="filter" >
+                <li class="active">TÜMÜ</li>
+                <li>ROMAN</li>
+                <li>KİŞİSEL GELİŞİM</li>
+                <li>FANTASTİK</li>
+            </ul>
+            <div class="row book_list">
+            </div>
+        </section>
+        <div class="basket_model">
+            <div class="basket_items">
+                <i class="bi bi-x" onclick="toggleModel()"></i>
+                <h2 class="basket_title">Your İtems</h2>
+                <ul class="basket_list">
+                    <li class="basket_item">
+                        No İtems to Buy Again.
+                    </li>
+                </ul>
+                <div class="basket_total">
+                    <span class="fw-bold mb-2 fs-4 total_price"></span>
+                    <button class="btn_purple">CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="./jquery/jquery.min.js"></script>
+        <script src="./toastr/toastr.min.js"></script>
+        <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
